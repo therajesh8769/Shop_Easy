@@ -37,14 +37,14 @@ const AddressForm = ({ address: initialAddress = {}, onSuccess, onCancel }) => {
       if (initialAddress && initialAddress._id) {
         // Update existing
         await axios.put(
-          `http://localhost:8080/api/user/addresses/${initialAddress._id}`,
+          `https://shopeasy-red.vercel.app/api/user/addresses/${initialAddress._id}`,
           address,
           config
         );
       } else {
         // Create new
         await axios.post(
-          "http://localhost:8080/api/user/address",
+          "https://shopeasy-red.vercel.app/api/user/address",
           address,
           config
         );

@@ -9,7 +9,7 @@ const SelectAddress = ({ onSelect }) => {
 
   const fetchAddresses = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/user/addresses", {
+      const res = await axios.get("https://shopeasy-red.vercel.app/api/user/addresses", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
