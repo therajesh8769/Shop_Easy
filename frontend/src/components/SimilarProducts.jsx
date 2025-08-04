@@ -10,7 +10,7 @@ const SimilarProducts=({item})=>{
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const res = await axios.get("https://shopeasy-red.vercel.app/api/products");
+          const res = await axios.get("https://shop-easyb.vercel.app/api/products");
           setAllProducts(res.data);
         } catch (err) {
           console.error("Failed to fetch products", err);

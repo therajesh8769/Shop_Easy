@@ -9,7 +9,7 @@ const SelectAddress = ({ onSelect }) => {
 
   const fetchAddresses = async () => {
     try {
-      const res = await axios.get("https://shopeasy-red.vercel.app/api/user/addresses", {
+      const res = await axios.get("https://shop-easyb.vercel.app/api/user/addresses", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -39,7 +39,7 @@ const SelectAddress = ({ onSelect }) => {
   const handleSetDefault = async (id) => {
     try {
       await axios.patch(
-        `https://shopeasy-red.vercel.app/api/user/addresses/${id}/default`,
+        `https://shop-easyb.vercel.app/api/user/addresses/${id}/default`,
         {},
         {
           headers: {
@@ -56,7 +56,7 @@ const SelectAddress = ({ onSelect }) => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this address?")) return;
     try {
-      await axios.delete(`https://shopeasy-red.vercel.app/api/user/addresses/${id}`, {
+      await axios.delete(`https://shop-easyb.vercel.app/api/user/addresses/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
