@@ -19,7 +19,7 @@ connectDB();
 const app = express();
 app.use(cors(
     {
-        origin: process.env.CLIENT_URL || 'http://localhost:5173',
+        origin: 'https://shopeasy-red.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
         credentials: true
     }
