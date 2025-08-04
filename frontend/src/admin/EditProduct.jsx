@@ -14,7 +14,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/products/${id}`);
+                const res = await axios.get(`hhttps://shop-easyb.vercel.app/api/products/${id}`);
                 setProduct(res.data);
                 setColorsInput(res.data.colors?.join(", ") || ""); 
             } catch (err) {
@@ -35,7 +35,7 @@ const EditProduct = () => {
                 formData.append("images", file);
 
                 const res = await axios.post(
-                    "http://localhost:8080/api/admin/upload",
+                    "https://shop-easyb.vercel.app/api/admin/upload",
                     formData,
                     {
                         headers: {
@@ -85,7 +85,7 @@ const EditProduct = () => {
             };
 
             await axios.put(
-                `http://localhost:8080/api/products/${id}`,
+                `https://shop-easyb.vercel.app/api/products/${id}`,
                 updatedData,
                 {
                     headers: {

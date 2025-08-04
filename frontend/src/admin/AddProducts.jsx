@@ -37,7 +37,7 @@ const AddProduct = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:8080/api/admin/upload",
+        "https://shop-easyb.vercel.app/api/admin/upload",
         formData,
         {
           headers: {
@@ -75,7 +75,7 @@ const AddProduct = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8080/api/products/create", // this route should save product to DB
+        "https://shop-easyb.vercel.app/api/products/create", // this route should save product to DB
         { ...productData, images: uploadedURLs }, // Include all uploaded image URLs
         {
           headers: {

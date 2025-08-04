@@ -61,7 +61,7 @@ const handlePlaceOrder = async () => {
       if (!selectedAddress) return alert("Please select a delivery address.");
       if (totalAmount <= 0) return alert("Cart is empty. Please add items to cart before checkout.");
       const res = await axios.post(
-        "http://localhost:8080/api/payment/create-order",
+        "https://shop-easyb.vercel.app/api/payment/create-order",
        { 
         amount: totalAmount
         },
@@ -84,7 +84,7 @@ const handlePlaceOrder = async () => {
           const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = response;
   
           // Step 3: Send to backend for verification
-          const verifyRes = await axios.post("http://localhost:8080/api/payment/verify-payment", {
+          const verifyRes = await axios.post("https://shop-easyb.vercel.app/api/payment/verify-payment", {
             razorpay_payment_id,
             razorpay_order_id,
             razorpay_signature,

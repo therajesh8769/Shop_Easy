@@ -9,7 +9,7 @@ const Products = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/api/products", {
+            const res = await axios.get("https://shop-easyb.vercel.app/api/products", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`, // Include token
                 },
@@ -32,7 +32,7 @@ const Products = () => {
         }
 
         try {
-            await axios.delete(`http://localhost:8080/api/products/${id}`, {
+            await axios.delete(`https://shop-easyb.vercel.app/api/products/${id}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

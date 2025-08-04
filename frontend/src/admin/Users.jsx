@@ -6,7 +6,7 @@ const Users = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/api/users", {
+            .get("https://shop-easyb.vercel.app/api/users", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

@@ -34,7 +34,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-        const res = await fetch("http://localhost:8080/api/auth/login", {
+        const res = await fetch("https://shop-easyb.vercel.app/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

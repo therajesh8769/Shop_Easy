@@ -10,7 +10,7 @@ const Orders = () => {
 
     const fetchOrders = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/api/orders/getAllOrders", {
+            const res = await axios.get("https://shop-easyb.vercel.app/api/orders/getAllOrders", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -25,7 +25,7 @@ const Orders = () => {
     const handleStatusChange = async (orderId, newStatus) => {
         try {
           await axios.put(
-            `http://localhost:8080/api/delivery/${orderId}/update-status`, // Changed from /api/admin/
+            `https://shop-easyb.vercel.app/api/delivery/${orderId}/update-status`, // Changed from /api/admin/
             { status: newStatus },
             {
               headers: {

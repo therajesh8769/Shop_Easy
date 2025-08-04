@@ -11,7 +11,7 @@ const Products=()=>{
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/api/products", {
+            const res = await axios.get("https://shop-easyb.vercel.app/api/products", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`, // Include token
                 },

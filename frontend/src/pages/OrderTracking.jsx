@@ -16,7 +16,7 @@ const OrderTracking = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:8080/api/orders/user-orders", {
+      const response = await axios.get("https://shop-easyb.vercel.app/api/orders/user-orders", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

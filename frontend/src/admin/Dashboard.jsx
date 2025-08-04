@@ -14,7 +14,7 @@ const Dashboard = () => {
         const token = localStorage.getItem("token");
        
   
-        const res = await axios.get("http://localhost:8080/api/users/stats", {
+        const res = await axios.get("https://shop-easyb.vercel.app/api/users/stats", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -34,7 +34,7 @@ const Dashboard = () => {
   const fetchProductCount = async () => {
         try{
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:8080/api/products/stats", {
+            const res = await axios.get("https://shop-easyb.vercel.app/api/products/stats", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -52,7 +52,7 @@ const Dashboard = () => {
   const fetchOrdersCount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:8080/api/orders/getOrderStats", {
+      const res = await axios.get("https://shop-easyb.vercel.app/api/orders/getOrderStats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
