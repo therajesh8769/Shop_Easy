@@ -1,1 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Dependency directories
+bower_components/
+
+# Optional: ignore coverage reports
+coverage/
+
+# Optional: ignore database/local storage
+*.sqlite
+*.db
+*.pid
+
+# Optional: ignore compiled files
+*.out
+*.tsbuildinfo
