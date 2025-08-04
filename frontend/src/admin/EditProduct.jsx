@@ -14,7 +14,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.get(`hhttps://shop-easyb.vercel.app/api/products/${id}`);
+                const res = await axios.get(`https://shop-easyb.vercel.app/api/products/${id}`);
                 setProduct(res.data);
                 setColorsInput(res.data.colors?.join(", ") || ""); 
             } catch (err) {
