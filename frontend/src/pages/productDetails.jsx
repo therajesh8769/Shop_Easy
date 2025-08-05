@@ -139,7 +139,7 @@ const ProductDetail = () => {
       
       <p className="text-xl font-semibold text-gray-800">₹{product.price}</p>
       <p className="text-green-600 text-md">{product.offer}</p>
-      <p className="text-gray-700">{product.desp}</p>
+      {/* <p className="text-gray-700">{product.desp}</p> */}
       <div className="mt-4">
       
   <p className="mb-2 text-sm font-medium text-gray-700">Select Color:</p>
@@ -160,6 +160,7 @@ const ProductDetail = () => {
       </button>
     ))}
   </div>
+  <p className="text-gray-700 text-sm ">{product.desp}</p>
 </div>
 
 
