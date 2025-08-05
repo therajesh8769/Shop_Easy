@@ -40,7 +40,7 @@ const ProductCard = ({ item }) => {
                     className="w-full h-80 object-cover rounded-t-md transition-transform duration-300 transform hover:scale-105"
                 />
                 <h3 className="text-lg font-semibold mt-2">{item.title}</h3>
-                <p className="text-gray-600 mt-1  text-center">{item.desp}</p>
+                {/* <p className="text-gray-600 mt-1  text-center">{item.desp}</p> */}
                 <p className="text-xl  mt-2 ">
                     <span className='font-bold'>₹{item.price}</span>
                     <span className='text-green-600 ml-3 text-md'>{item.offer}</span>
