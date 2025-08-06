@@ -97,19 +97,62 @@ const ProductDetail = () => {
     {/* Mobile Info */}
     <div className="mt-4">
       <h1 className="text-3xl font-bold mb-2">{product.title}</h1>
-      <p className="text-gray-700 mb-4">{product.desp}</p>
+      
       <p className="text-xl font-semibold">₹{product.price}</p>
       <p className="text-green-600 text-md">{product.offer}</p>
+      <p className="mb-2 text-sm font-medium text-gray-700">Select Color:</p>
+  <div className="flex gap-3 flex-wrap">
+    {product.colors.map((color) => (
+      <button
+        key={color}
+        onClick={() => setSelectedColor(color)}
+        className={`flex items-center gap-2 px-3 py-1 border rounded-full ${
+          selectedColor === color ? "ring-2 ring-black" : ""
+        }`}
+      >
+        <div
+          className="w-5 h-5 rounded-full border"
+          style={{ backgroundColor: color }}
+        ></div>
+        <span className="text-sm text-gray-800 capitalize">{color}</span>
+      </button>
+    ))}
+  </div>
+  <div className="mt-4">
+  <p className="mb-1 text-sm font-medium">Select Size:</p>
+  <div className="grid grid-cols-6 gap-2">
+    {product.sizes.map((size) => (
+      <button
+        key={size}
+        onClick={() => setSelectedSize(size)}
+        className={`border px-3 py-1 text-sm rounded ${
+          selectedSize === size ? "bg-black text-white" : "hover:bg-black hover:text-white"
+        } transition`}
+      >
+        {size}
+      </button>
+    ))}
+  </div>
+</div>
       <div className="flex gap-4 mt-4 mb-3">
-        <button
-            className="bg-gray-600 text-white text-sm px-2 py-1 rounded-lg"
-            onClick={() => addToCart(product)} 
-        >
-            Add to Cart
-        </button>
-        <button className="bg-gray-600 text-white text-sm px-2 py-1 rounded-lg">
-            Buy Now
-        </button>
+      <button
+  className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
+  onClick={() => {
+    if (!selectedSize || !selectedColor) {
+      alert("Please select both size and color");
+      return;
+    }
+
+    addToCart({
+      ...product,
+      selectedSize,
+      selectedColor,
+    });
+  }}
+>
+  Add
+</button>
+        <p className="text-gray-700 mb-4">{product.desp}</p>
       </div>
       <Accordian
         title={product.title}
