@@ -152,7 +152,7 @@ const ProductDetail = () => {
 >
   Add
 </button>
-        <p className="text-gray-700 mb-4">{product.desp}</p>
+      
       </div>
       <Accordian
         title={product.title}
